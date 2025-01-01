@@ -1,5 +1,27 @@
+package app;
+
+// Виправте цей клас +
 public class Main {
+
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Customer customer = getCustomer(getData());
+        String output = "Customer: " + customer.getName() +
+                ", phone " + customer.getPhone();
+        getOutput(output);
+    }
+
+    public static String[] getData() {
+        return new String[]{ /* пропишіть значення для об'єкту Customer + */
+                "Tom",
+                "555 123-8596"
+        };
+    }
+
+    public static Customer getCustomer(String[] data) {
+        return new Customer(data[0], data[1]);
+    }
+
+    public static void getOutput(String output) {
+        System.out.println(output);
     }
 }
